@@ -177,9 +177,17 @@ int main() {
         system("clear");        
         printf("Score: %d\n\n", score);
         for (int y = 0; y < FIELD_SIZE; y++) {
-            for (int x = 0; x < FIELD_SIZE; x++) {
-                printf("%c", field[y][x]);
-            }
+			for (int x = 0; x < FIELD_SIZE; x++) {
+                if (field[y][x] == PLAYER_SYMBOL) {
+					printf("\033[0;102m \033[0m");
+				} else if (field[y][x] == FOOD_SYMBOL) {
+					printf("\033[1;31mA\033[0m");
+				} else if (field[y][x] == WALL_SYMBOL) {
+					printf("\033[0;44m \033[0m");
+				} else {
+					printf(" ");
+            	}
+			}
             printf("\n");
         }
         
