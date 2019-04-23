@@ -1,4 +1,4 @@
 # snake
-a simple SNAKE game
+a simple snake game
 
 ![screenshot](snake.png)
